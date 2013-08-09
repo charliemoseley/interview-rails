@@ -4,7 +4,7 @@ class UnderwritingsController < ApplicationController
   # GET /underwritings
   # GET /underwritings.json
   def index
-    @underwritings = Underwriting.all
+    @underwritings = Underwriting.includes(:shop).all
   end
 
   # GET /underwritings/1

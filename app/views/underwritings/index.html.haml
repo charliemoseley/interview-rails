@@ -10,7 +10,7 @@
 
   - @underwritings.each do |underwriting|
     %tr
-      %td= underwriting.shop
+      %td= underwriting.shop.name
       %td= underwriting.status
       %td= link_to 'Show', underwriting
       %td= link_to 'Edit', edit_underwriting_path(underwriting)
