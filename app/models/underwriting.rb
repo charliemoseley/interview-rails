@@ -6,4 +6,8 @@ class Underwriting < ActiveRecord::Base
   }.freeze
 
   belongs_to :shop
+
+  STATUSES.each do |key, value|
+    scope key, -> { where(status: value) }
+  end
 end
