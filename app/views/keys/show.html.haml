@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Shop:
+  = @key.shop
+%p
+  %b Identifier:
+  = @key.identifier
+
+= link_to 'Edit', edit_key_path(@key)
+\|
+= link_to 'Back', keys_path

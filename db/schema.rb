@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130809080121) do
+ActiveRecord::Schema.define(version: 20130809080501) do
+
+  create_table "keys", force: true do |t|
+    t.integer  "shop_id"
+    t.string   "identifier"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "keys", ["identifier"], name: "index_keys_on_identifier", unique: true
+  add_index "keys", ["shop_id"], name: "index_keys_on_shop_id"
 
   create_table "shops", force: true do |t|
     t.string   "name"
