@@ -10,7 +10,7 @@
 
   - @keys.each do |key|
     %tr
-      %td= key.shop
+      %td= key.shop.name
       %td= key.identifier
       %td= link_to 'Show', key
       %td= link_to 'Edit', edit_key_path(key)

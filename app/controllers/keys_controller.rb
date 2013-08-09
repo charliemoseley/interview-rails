@@ -4,7 +4,7 @@ class KeysController < ApplicationController
   # GET /keys
   # GET /keys.json
   def index
-    @keys = Key.all
+    @keys = Key.includes(:shop).all
   end
 
   # GET /keys/1
