@@ -1,4 +1,6 @@
 InterviewRails::Application.routes.draw do
+  resources :underwritings
+
   resources :keys
 
   resources :shops

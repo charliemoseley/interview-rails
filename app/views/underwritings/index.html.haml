@@ -1,0 +1,21 @@
+%h1 Listing underwritings
+
+%table
+  %tr
+    %th Shop
+    %th Status
+    %th
+    %th
+    %th
+
+  - @underwritings.each do |underwriting|
+    %tr
+      %td= underwriting.shop
+      %td= underwriting.status
+      %td= link_to 'Show', underwriting
+      %td= link_to 'Edit', edit_underwriting_path(underwriting)
+      %td= link_to 'Destroy', underwriting, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Underwriting', new_underwriting_path

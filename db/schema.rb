@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130809080501) do
+ActiveRecord::Schema.define(version: 20130809080747) do
 
   create_table "keys", force: true do |t|
     t.integer  "shop_id"
@@ -28,5 +28,16 @@ ActiveRecord::Schema.define(version: 20130809080501) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "underwritings", force: true do |t|
+    t.integer  "shop_id"
+    t.integer  "status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "underwritings", ["created_at"], name: "index_underwritings_on_created_at"
+  add_index "underwritings", ["shop_id"], name: "index_underwritings_on_shop_id"
+  add_index "underwritings", ["status"], name: "index_underwritings_on_status"
 
 end

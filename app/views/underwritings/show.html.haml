@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Shop:
+  = @underwriting.shop
+%p
+  %b Status:
+  = @underwriting.status
+
+= link_to 'Edit', edit_underwriting_path(@underwriting)
+\|
+= link_to 'Back', underwritings_path
