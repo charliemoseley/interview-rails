@@ -41,6 +41,10 @@ group :development, :test do
   gem 'quiet_assets'
 end
 
+group :development do
+  gem 'annotate', '>=2.5.0'
+end
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

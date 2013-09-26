@@ -1,3 +1,14 @@
+# == Schema Information
+#
+# Table name: underwritings
+#
+#  id         :integer          not null, primary key
+#  shop_id    :integer
+#  status     :integer
+#  created_at :datetime
+#  updated_at :datetime
+#
+
 class Underwriting < ActiveRecord::Base
   STATUSES = {
     limited: 0,
