@@ -37,6 +37,8 @@ end
 group :development, :test do
   gem 'pry-rails'
   gem 'rspec-rails'
+  gem 'spring'
+  gem 'quiet_assets'
 end
 
 # Use ActiveModel has_secure_password
